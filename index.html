@@ -1,53 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>PetShop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PetShop | Productos para Mascotas</title>
+
+<meta name="description" content="PetShop: comida, juguetes y accesorios para tus mascotas.">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
 body{
-font-family: Arial;
 background:#f4f6f8;
+}
+
+/* NAVBAR */
+
+nav{
+background:#2ecc71;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+url("https://images.unsplash.com/photo-1601758123927-196f8c9b66c9");
+background-size:cover;
+color:white;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#2ecc71;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* PRODUCTOS */
+
+.productos{
+padding:50px;
 text-align:center;
 }
 
-h1{
-color:#2ecc71;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+gap:25px;
+margin-top:30px;
 }
 
-.producto{
+.card{
 background:white;
-padding:20px;
-margin:20px;
-display:inline-block;
 border-radius:10px;
-width:200px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+overflow:hidden;
 }
-</style>
 
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+margin:10px;
+}
+
+.card p{
+color:#555;
+}
+
+.card button{
+margin:15px;
+padding:10px;
+background:#2ecc71;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>🐾 PetShop</h1>
-<p>Bienvenido a nuestra tienda de mascotas</p>
+<nav>
+<h2>🐾 PetShop</h2>
 
-<div class="producto">
-<h3>Comida para perro</h3>
-<p>S/30</p>
+<ul>
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Productos</a></li>
+<li><a href="#">Contacto</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Todo para tu mascota</h1>
+<p>Encuentra los mejores productos</p>
+<button>Ver productos</button>
+</section>
+
+<section class="productos">
+
+<h2>Nuestros Productos</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e">
+<h3>Comida Premium</h3>
+<p>S/35</p>
+<button>Comprar</button>
 </div>
 
-<div class="producto">
-<h3>Juguete para gato</h3>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+<h3>Juguete para perro</h3>
 <p>S/20</p>
+<button>Comprar</button>
 </div>
 
-<div class="producto">
-<h3>Cama para perro</h3>
-<p>S/80</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1595433562696-54c7f96c9e8f">
+<h3>Rascador para gato</h3>
+<p>S/50</p>
+<button>Comprar</button>
 </div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 PetShop - Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
-
